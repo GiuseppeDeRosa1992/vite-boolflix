@@ -26,6 +26,7 @@ export default {
             <div class="content-card text-white">
                 <div class="row m-0 justify-content-between">
                     <CreatedMovies v-for="list in store.movieList" :card="list" />
+                    <CreatedMovies class="bg-danger" v-for="list in store.tvList" :card="list" />
                 </div>
             </div>
         </section>
