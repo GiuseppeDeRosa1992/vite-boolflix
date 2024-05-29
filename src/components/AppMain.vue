@@ -21,7 +21,14 @@ export default {
 
 <template>
     <main>
-        <CreatedMovies />
+        <!-- SEZIONE MOVIES -->
+        <section id="card" class="container bg-white p-4">
+            <div class="content-card text-white">
+                <div class="row m-0 justify-content-between">
+                    <CreatedMovies v-for="list in store.movieList" :card="list" />
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
