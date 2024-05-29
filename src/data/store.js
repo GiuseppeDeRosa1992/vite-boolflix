@@ -20,6 +20,8 @@ const iMieiDati = reactive({
 
     //VARIABILE PER H2 DELLE SERIE TV CHE CAMBIA DENTRO ALLA FUNZIONE DEL BUTTON
     serieTv: "",
+
+    urlImage: "https://image.tmdb.org/t/p/w1280"
 });
 
 export default iMieiDati;
