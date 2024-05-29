@@ -39,10 +39,16 @@ export default {
 </script>
 
 <template>
-    <header class="bg-warning p-2 text-center">
-        <h1 class="m-0">Cerca il tuo film</h1>
-        <input type="text" placeholder="Cerca" v-model="store.searchInput">
-        <button @click="foundMovies()">Cerca</button>
+    <header class="bg-black p-2 text-center mb-3">
+        <nav class="row m-0 align-items-center">
+            <div class="col-6 text-start">
+                <h1 class="m-0 text-danger">BOOLFLIX</h1>
+            </div>
+            <div class="col-6 text-end">
+                <input type="text" placeholder="Cerca" v-model="store.searchInput">
+                <button @click="foundMovies()">Cerca</button>
+            </div>
+        </nav>
     </header>
 </template>
 
