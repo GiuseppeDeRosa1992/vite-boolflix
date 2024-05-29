@@ -1,18 +1,38 @@
 <script>
-import store from "../data/store.js"
+import store from "../data/store.js";
+import axios from "axios";
 
 export default {
     data() {
         return {
             store,
+
         }
     },
 
     methods: {
         foundMovies() {
-            this.store.searchInput
-            console.log("cliccato", this.store.searchInput)
-            this.store.searchInput = ""
+            const options = {
+                method: 'GET',
+                url: this.store.url,
+                params: { query: this.store.searchInput, language: 'it-IT' },
+                headers: {
+                    accept: 'application/json',
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDc2ZTE3MjRkMmRkN2Y3MmJlMWNlZmU2ZmM1ZDE2NSIsInN1YiI6IjY2NTcyMDI3MDI4NjVlY2VhYTU5OTY4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oertjiXySwkWZydHwZLqFcz-MMuUUC0oCzK4koKkyzo'
+                },
+            };
+
+            axios
+                .request(options)
+                .then((response) => {
+                    console.log(response.data.results);
+                    this.store.movieList = response.data.results
+                    console.log(this.store.movieList)
+                    console.log(options)
+                })
+                .catch(function (error) {
+                    console.error(error);
+                });
         }
     },
 }
