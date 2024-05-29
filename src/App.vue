@@ -1,5 +1,17 @@
 <script>
+import axios from 'axios';
+export default {
+  components: {
+  },
 
+  data() {
+    return {
+    }
+  },
+  created() {
+
+  }
+}
 </script>
 
 <template>
