@@ -13,6 +13,7 @@ export default {
     methods: {
         //CREO FUNZIONE  PER FILM CHE RICHIAMO AL CLICK DEL BOTTONE
         foundMovies() {
+            this.store.film = "Film Trovati";
             const options = {
                 method: 'GET',
                 //RICHIAMO URL PER I FILM (MOVIES) DA STORE.JS
@@ -40,6 +41,7 @@ export default {
 
         //CREO FUNZIONE PER SERIE TV CHE RICHIAMO AL CLICK DEL BOTTONE
         foundTvSeries() {
+            this.store.serieTv = "Serie TV Trovate";
             const options = {
                 method: 'GET',
                 //RICHIAMO URL PER I SERIE TV (TV) DA STORE.JS
