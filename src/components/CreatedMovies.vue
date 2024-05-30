@@ -28,7 +28,9 @@ export default {
             <!-- TITOLO DEL FILM IN LINGUA ITALIANA -->
             <h6 class="card-text my-fs py-2s text-center text-dark">Titolo film: {{ card.title }} </h6>
             <!-- VOTO DEL FILM FIXATO CON MASSIMO DUE NUMERI DOPO LA VIRGOLA E DIVISO 2 DA AVERE UN NUMERO DA 1 A 5 VISTO CHE ERA DA 1 A 10 -->
-            <h6 class="card-text my-fs py-2s text-center text-dark">Voti film: {{ card.vote_average.toFixed(1) / 2 }}
+            <h6 class="card-text my-fs py-2s text-center text-dark">
+
+                Voti film: {{ (card.vote_average / 2).toFixed(2) }}
             </h6>
             <!-- LINGUA ORIGINALE DEL FILM -->
             <h6 class="card-text my-fs py-2s text-center text-dark">Lingua film:{{ card.original_language }} </h6>
