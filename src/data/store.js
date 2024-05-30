@@ -23,7 +23,7 @@ const iMieiDati = reactive({
 
     urlImage: "https://image.tmdb.org/t/p/w1280",
 
-    urlImageRandom: "https://image.tmdb.org/t/p/w1280/frDS8A5vIP927KYAxTVVKRIbqZw.jpg"
+    urlImageRandom: "https://picsum.photos/200/120"
 });
 
 export default iMieiDati;
