@@ -9,11 +9,15 @@ const iMieiDati = reactive({
     //CREO VARIABILE PER URL API DELLE SERIE TV
     urlTv: 'https://api.themoviedb.org/3/search/tv',
 
+    urlPopular: 'https://api.themoviedb.org/3/movie/popular',
+
     //LISTA DI APPOGGIO DOVE INIETTO LE CHIAMATE AXIOS PER I FILM
     moviesList: [],
 
     //LISTA DI APPOGGIO DOVE INIETTO LE CHIAMATE AXIOS PER LE SERIE TV
     tvList: [],
+
+    originalList: [],
 
     //VARIABILE PER H2 FILM CHE CAMBIA DENTRO ALLA FUNZIONE DEL BUTTON
     film: "",
@@ -27,7 +31,17 @@ const iMieiDati = reactive({
     urlImageRandom: "https://picsum.photos/200/120",
 
     //VARIABILE PER IMG RANDOM PRESA DA PICSUM PER LE SERIE
-    urlImageRandomPoster: "https://picsum.photos/170/255"
+    urlImageRandomPoster: "https://picsum.photos/170/255",
+
+    //VARIABILE LISTA NAVBAR
+    navList: [
+        "Home",
+        "SerieTV",
+        "Film",
+        "Originali",
+        "Aggiunti Di Recente",
+        "La Mia Lista",
+    ]
 });
 
 export default iMieiDati;
