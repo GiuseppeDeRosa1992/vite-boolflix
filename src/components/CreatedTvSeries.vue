@@ -19,7 +19,8 @@ export default {
 <template>
     <div class="col-12 col-sm-6 col-md-4 col-lg-2 px-2 py-1 mb-2">
         <div class="m-0 h-100 py-1 bg-primary">
-            <img :src='store.urlImage + cardTv.backdrop_path' class="card-img-top img-fluid" alt="">
+            <img :src="cardTv.backdrop_path == null ? store.urlImageRandom : store.urlImage + cardTv.backdrop_path"
+                class="card-img-top img-fluid" alt="">
             <!-- TITOLO DELLA SERIE IN LINGUA ORIGINALE DELLA SERIE -->
             <h6 class="card-text my-fs py-2 text-center">
                 Titolo serie tv in lingua originale: {{ cardTv.original_name }}

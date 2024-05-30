@@ -19,7 +19,7 @@ export default {
 <template>
     <div class="col-12 col-sm-6 col-md-4 col-lg-2 px-2 py-1 mb-2">
         <div class="m-0 h-100 py-1 bg-primary">
-            <img :src="card.backdrop_path == 'null' ? store.urlImageRandom : store.urlImage + card.backdrop_path"
+            <img :src="card.backdrop_path == null ? store.urlImageRandom : store.urlImage + card.backdrop_path"
                 class="card-img-top img-fluid" alt="">
             <!-- TITOLO IN LINGUA ORIGINALE FILM -->
             <h6 class="card-text my-fs py-2 text-center">Titolo film in lingua originale:
@@ -30,21 +30,21 @@ export default {
             <!-- VOTO DEL FILM FIXATO CON MASSIMO DUE NUMERI DOPO LA VIRGOLA E DIVISO 2 DA AVERE UN NUMERO DA 1 A 5 VISTO CHE ERA DA 1 A 10 -->
             <h6 class="card-text my-fs py-2s text-center text-dark">
                 Voti film: {{ (card.vote_average / 2).toFixed(2) }}
-                <!-- AGGIUNTA STELLE IN BASE AL VOTO FIXATO E DIVISO PER 2 -->
+                <!-- AGGIUNTA STELLE IN BASE AL VOTO E DIVISO PER 2 -->
                 <div class="text-center mb-1">
-                    <span v-if="(card.vote_average / 2).toFixed(2) >= 0.5">
+                    <span v-if="(card.vote_average / 2) >= 0.5">
                         <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                     </span>
-                    <span v-if="(card.vote_average / 2).toFixed(2) >= 1.5">
+                    <span v-if="(card.vote_average / 2) >= 1.5">
                         <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                     </span>
-                    <span v-if="(card.vote_average / 2).toFixed(2) >= 2.5">
+                    <span v-if="(card.vote_average / 2) >= 2.5">
                         <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                     </span>
-                    <span v-if="(card.vote_average / 2).toFixed(2) >= 3.5">
+                    <span v-if="(card.vote_average / 2) >= 3.5">
                         <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                     </span>
-                    <span v-if="(card.vote_average / 2).toFixed(2) >= 4.5">
+                    <span v-if="(card.vote_average / 2) >= 4.5">
                         <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                     </span>
                 </div>
