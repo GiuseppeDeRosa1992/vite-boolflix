@@ -29,8 +29,25 @@ export default {
             <h6 class="card-text my-fs py-2s text-center text-dark">Titolo film: {{ card.title }} </h6>
             <!-- VOTO DEL FILM FIXATO CON MASSIMO DUE NUMERI DOPO LA VIRGOLA E DIVISO 2 DA AVERE UN NUMERO DA 1 A 5 VISTO CHE ERA DA 1 A 10 -->
             <h6 class="card-text my-fs py-2s text-center text-dark">
-
                 Voti film: {{ (card.vote_average / 2).toFixed(2) }}
+                <!-- AGGIUNTA STELLE IN BASE AL VOTO FIXATO E DIVISO PER 2 -->
+                <div class="text-center mb-1">
+                    <span v-if="(card.vote_average / 2).toFixed(2) >= 0.5">
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    </span>
+                    <span v-if="(card.vote_average / 2).toFixed(2) >= 1.5">
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    </span>
+                    <span v-if="(card.vote_average / 2).toFixed(2) >= 2.5">
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    </span>
+                    <span v-if="(card.vote_average / 2).toFixed(2) >= 3.5">
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    </span>
+                    <span v-if="(card.vote_average / 2).toFixed(2) >= 4.5">
+                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    </span>
+                </div>
             </h6>
             <!-- LINGUA ORIGINALE DEL FILM -->
             <h6 class="card-text my-fs py-2s text-center text-dark">Lingua film:{{ card.original_language }} </h6>
